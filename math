@@ -1,0 +1,11 @@
+//tuple元组
+
+tuple是一个固定大小的不同类型值的集合，是泛化的 std::pair。可以当做一通用的结构体使用，
+不需要创建结构体而又获取结构体的特征，在某些情况下可以取代结构体，使程序简洁、直观。 
+创建tuple
+
+
+make_tupe
+tuple<const char*, int> tp = make_tuple(sendPack, nSendSize);//构造tuple
+tie 函数（创建一个元组的左值引用）
+auto tp = std::tie(1, "aa", 2.2); //tp 实际类型为 std::tuple<int&, string&, int&>
